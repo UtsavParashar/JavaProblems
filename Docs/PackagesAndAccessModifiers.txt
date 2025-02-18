@@ -1,0 +1,83 @@
+A file can have any number of classes.
+If there is any public class in a file then the file name should be same as the class name
+If there are many classes in a file then after compilation .class file is created for each class.
+Each class should have a main method else an error will be raised.
+
+Package Imports - 
+Two types - 
+Explicit Import - java.utils.ArrayList - Recommended
+Implicit Import - java.utils.*
+
+Ambiguity Problem - for Date class in util and sql package
+import java.util.*;
+import java.sql.*;
+CE - reference to date is ambiguous
+
+Same issue with List as it is present in both util and awt package.
+
+if we use explicit or implicit Imports
+import java.sql.*;
+import java.util.Date;
+No compile time error as compiler follow below priority/precedence while matching classes
+1. Explicit class import
+2. Class prestn in Current working directory(default package)
+3. Implicity class import; *
+
+Whenever we are importing a java package, all classes and interfaces present in the package are avaialble but subpackage classes.
+If we want to use subpackage class, compulsary write import package till subpackage level.
+Eg. java.util.regex.Pattern;
+
+Default package avaialble to all classes - 2
+1. java.lang egs like String
+2. default package, current working directory
+
+Dynamic import/Load on Event/Load of the fly - 
+import statements classes when used, at that point only the class will be loaded 
+
+Packages - Encapsulation mechanism to group related classes and interfaces into a single unit called package.
+--------
+Eg- All classes and interfaces for DB operations are in sql package similary all file related classes and Interface in io pacakage.
+
+Benefits - Resolve naming conflicts
+modularity and maintainability of the program is improved.
+security - Eg. default modifier for a class is default and a default class cannot be accessed outside a package.
+
+Follows naming convention of reverse domain name like com.google for its uniquness on this planet.
+Eg. com.icicibank.loan.housing.Account
+com.icicibank - internet domain name in reverse
+loan - package name
+housing - subpackage name
+Account - class/file name
+
+Order 
+package statement; - Atmost 1
+import statements; - Any number
+class|interface|enum declaration
+
+Class Level Modifiers - 
+-----------------------
+public, protected, private, default, final, static, abstract, strictfp, transient, synchronized etc
+
+When we write a class, we need to provide some information about the class to the JVM like 
+1. can this class be accessed by anywhere or not - public
+whether child class can be created - final
+object creation is possible or not - abstract
+we can specify this information by using appropriate modifier.
+Applicable modifiers for top level classes - 5
+public - class accessible from anywhere
+
+default - class could be accessed from the current package, can't be accessed from outside package. Hence default package is also known as access level package.
+
+final - can be applied to classes, methods and variables.
+final method - cannot be overridden in the child class. --> hence missing polymorphism
+final class - cannot be inherited --> hence missing inheritance
+* every method present inside final class is alway final by default.
+* every variable present inside final class need not be final.
+* advantage of final is security
+
+abstract, 
+strictfp
+For inner classes - 8 (5 outer class modifiers + 3 below)
+private, 
+protected, 
+static
