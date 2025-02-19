@@ -74,10 +74,20 @@ final class - cannot be inherited --> hence missing inheritance
 * every method present inside final class is alway final by default.
 * every variable present inside final class need not be final.
 * advantage of final is security
+final variable is a constant which should be declared with a value before constructor declaration.
 
-abstract, 
+abstract - applicable for a class or method
+any class contains without even a single abstrat method could be marked as abstract.
+ANy class which has partial implementation and for which we are not allowed to create object because of partial implemantation, such type of class has to be declared with Abstract modifiers.
+
+abstract method combination with final, native, synchronized, static, private, strictfp is invalid/illegal.
+abstract class combination with final is invalid/illegal.
+abstract class can contain final method but final class cannot contain abstract method.
+
 strictfp
 For inner classes - 8 (5 outer class modifiers + 3 below)
 private, 
 protected, 
-static
+
+static - 
+static variable - class level variable

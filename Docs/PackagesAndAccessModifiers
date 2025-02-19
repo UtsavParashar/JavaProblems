@@ -1,9 +1,0 @@
-A file can have any number of classes.
-If there is any public class in a file then the file name should be same as the class name
-If there are many classes in a file then after compilation .class file is created for each class.
-Each class should have a main method else an error will be raised.
-
-Package Imports - 
-Two types - 
-Explicit Import - java.utils.ArrayList
-Implicit Import - java.utils.*
