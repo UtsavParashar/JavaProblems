@@ -97,3 +97,50 @@ for static methods overloading and inheritance is application but not overriddin
 Instead of overridding, method hiding is applicable.
 static method cannot contain instance variable because static members are loaded at the start of the program before instance members.
 instance method can have static variables but not the other way round.
+
+Synchronized Modifier - 
+applicable for methods and blocks but not for classes and variables
+if multuple thread are trying to operate simulataneously on the same object could result in data inconsistency problem known as race condition.
+This problem can be overcome using synchronized keyword.
+If a method or block declared as synchronized than at a time only one thread is allowed to execute that method or block on the give object.
+So that data inconsistency problem would be resolved.
+Disadvantage - increases waiting time of threads and create performance problem.
+Hence if there is not specific required then it's not recommended to use synchronized keyword.
+synchronized method should contain implementation.
+Hence abstrat and synchronized on method is illegal combination.
+
+native - method specific modifier
+these methods are implemented in non java lang(mostly c or c++) are called native methods or foreign methods.
+
+strictfp - IEEE 754 standards for float
+
+transient - applicable only on variables
+used for serialization
+variables whose values are secure and does not want to be saved as same value in the file then use transient.
+JVM will store the variables values as ****
+eg transient password = abc1234
+
+Volatile - variable specific modifier
+separate copy of variable value for each thread
+causes memory issues as a separate copy of the variable is maintained by each thread
+
+Interfaces -
+-------------
+any service requirement specification(SRS) is considered an interface.
+eg API - Application Programming INTERFACE
+GUI - Graphical User INTERFACE
+100% pure abstract class is an Interface.
+
+All methods of an interface should be implemented in the class.
+if all methods are not implemented then the class should be abstract class.
+
+All method in the interface are by default public and abstract so when implementing the method in class
+the method should be public.
+
+Extends vs Implements -
+class can extend one class
+interface can extend any number of interfaces
+class can implement any number of interfaces simulataneously
+class A extends B implements C,D,E // extends always comes before implements
+
+
