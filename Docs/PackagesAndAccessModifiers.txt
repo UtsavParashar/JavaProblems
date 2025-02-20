@@ -91,3 +91,9 @@ protected,
 
 static - 
 static variable - class level variable
+static can be applied to methods, variables and inner classes. Top level class cannot be declared with static modified.
+Static inner classes are called static nested classes.
+for static methods overloading and inheritance is application but not overridding is not applicable.
+Instead of overridding, method hiding is applicable.
+static method cannot contain instance variable because static members are loaded at the start of the program before instance members.
+instance method can have static variables but not the other way round.
